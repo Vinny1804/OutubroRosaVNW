@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Noto Sans", sans-serif;
+  color: #E4EEF1;
+}
+* a {
+  cursor: url(./Imgs/cursor.cur), auto;
+}
+* a:hover {
+  font-size: 25px;
+}
+
+header {
+  display: flex;
+  background-color: #FF69B4;
+  height: 15vh;
+  justify-content: space-between;
+  padding-left: 5vw;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38.14px;
+}
+
+.containerLogo {
+  display: flex;
+  align-items: center;
+}
+.containerLogo img {
+  height: 100px;
+  width: 100px;
+}
+
+nav {
+  width: 30%;
+  margin-right: 12vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav a {
+  text-decoration: none;
+}
+
+main {
+  background-color: #FFD9EC;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34.05px;
+}
+
+.sectionSobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 100px 10px 0;
+}
+.sectionSobre p {
+  color: black;
+  width: 30%;
+}
+
+.sectionConscientizacao {
+  background-color: #FF69B4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3vh 15vw 3vh 0;
+}
+.sectionConscientizacao p {
+  width: 50%;
+}
+
+.sectionDicas {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15vh;
+}
+
+footer {
+  background-color: #FF69B4;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27.24px;
+  padding: 2vh 2vw;
+  width: 100%;
+}
+
+.sectionSociais {
+  width: 25vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sectionInfos {
+  text-align: center;
+  padding: 0 5vw;
+}
+
+.sectionLogo {
+  width: 25vw;
+  display: flex;
+  justify-content: flex-end;
+}/*# sourceMappingURL=style.css.map */
