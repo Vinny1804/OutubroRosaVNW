@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -8,20 +9,32 @@
 }
 * a {
   cursor: url(./Imgs/cursor.cur), auto;
+  text-decoration: none;
 }
 * a:hover {
   font-size: 25px;
+  text-decoration: underline;
 }
 
 header {
   display: flex;
+  justify-content: space-around;
   background-color: #FF69B4;
   height: 15vh;
-  justify-content: space-between;
-  padding-left: 5vw;
   font-weight: 400;
   font-size: 28px;
   line-height: 38.14px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+nav {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .containerLogo {
@@ -31,17 +44,6 @@ header {
 .containerLogo img {
   height: 100px;
   width: 100px;
-}
-
-nav {
-  width: 30%;
-  margin-right: 12vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-nav a {
-  text-decoration: none;
 }
 
 main {
@@ -55,11 +57,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px 100px 10px 0;
+  height: 45vh;
 }
 .sectionSobre p {
   color: black;
-  width: 30%;
+  width: 40%;
+}
+.sectionSobre img {
+  height: 40vh;
+  width: 30vw;
+  border-radius: 10px;
 }
 
 .sectionConscientizacao {
@@ -67,28 +74,37 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 3vh 15vw 3vh 0;
+  height: 35vh;
 }
 .sectionConscientizacao p {
-  width: 50%;
+  width: 40%;
+}
+.sectionConscientizacao img {
+  height: 30vh;
+  width: 30vw;
+  border-radius: 10px;
 }
 
 .sectionDicas {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 15vh;
+  height: 55vh;
+}
+.sectionDicas img {
+  height: 30vh;
+  width: 15vw;
 }
 
 footer {
   background-color: #FF69B4;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: 400;
   font-size: 20px;
   line-height: 27.24px;
-  padding: 2vh 2vw;
-  width: 100%;
+  height: 15vh;
 }
 
 .sectionSociais {
@@ -102,9 +118,96 @@ footer {
   text-align: center;
   padding: 0 5vw;
 }
+.sectionInfos .Joao {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.sectionInfos .Joao .JoaoEasterEgg {
+  visibility: hidden; /* A imagem começa escondida */
+  width: 200px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Ajuste a posição da imagem em relação ao parágrafo */
+  left: 50%;
+  margin-left: -100px; /* Centraliza a imagem */
+  opacity: 0; /* Invisível inicialmente */
+  transition: opacity 0.3s ease-in-out; /* Suave transição */
+  border-radius: 5px; /* Opcional: arredondamento */
+}
+.sectionInfos .Joao:hover .JoaoEasterEgg {
+  visibility: visible; /* Mostra a imagem ao passar o mouse */
+  opacity: 1; /* Torna a imagem visível */
+}
 
 .sectionLogo {
   width: 25vw;
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+  }
+  header nav {
+    width: 100%;
+    font-size: 20px;
+  }
+  .sectionSobre {
+    flex-direction: column-reverse;
+    height: 65vh;
+    align-items: center;
+  }
+  .sectionSobre p {
+    width: 90%;
+    font-size: 18px;
+  }
+  .sectionSobre img {
+    height: 35vh;
+    width: 45vw;
+  }
+  .sectionConscientizacao {
+    flex-direction: column;
+    height: 65vh;
+  }
+  .sectionConscientizacao p {
+    width: 90%;
+    font-size: 18px;
+  }
+  .sectionConscientizacao img {
+    height: 35vh;
+    width: 45vw;
+  }
+  .sectionDicas {
+    display: ruby;
+  }
+  .sectionDicas img {
+    height: 30vh;
+    width: 35vw;
+  }
+  footer {
+    height: 20vh;
+  }
+  .sectionSociais {
+    flex-direction: column;
+    height: 20vh;
+  }
+  .sectionSociais img {
+    height: 5vh;
+    display: flex;
+  }
+  .sectionInfos {
+    font-size: 15px;
+  }
+  .sectionLogo {
+    display: flex;
+    justify-content: center;
+  }
+  .sectionLogo img {
+    height: 10vh;
+  }
 }/*# sourceMappingURL=style.css.map */

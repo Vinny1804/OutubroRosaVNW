@@ -7,41 +7,38 @@
     color: #E4EEF1;
     a {
         cursor: url(./Imgs/cursor.cur), auto;
+        text-decoration: none;
     }
     a:hover {
         font-size: 25px;
+        text-decoration: underline;
     }
 }
 
 header {
     display: flex;
+    justify-content: space-around;
     background-color: #FF69B4;
     height: 15vh;
-    justify-content: space-between;
-    padding-left: 5vw;
     font-weight: 400;
     font-size: 28px;
     line-height: 38.14px;
-    
 }
-
-.containerLogo {
-    display: flex;
-    align-items: center; 
-
-    img {
-        height: 100px;
-        width: 100px;
-    }
+h1 {
+    font-size: 28px;
 }
 nav {
     width: 30%;
-    margin-right: 12vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    a {
-        text-decoration: none;
+}  
+.containerLogo {
+    display: flex;
+    align-items: center; 
+    img {
+        height: 100px;
+        width: 100px;
     }
 }
 
@@ -51,17 +48,19 @@ main {
     font-size: 25px;
     line-height: 34.05px;
 }
-
 .sectionSobre {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px 100px 10px 0;
-   
+    height: 45vh;
     p {
         color: black;
-        width: 30%;
-
+        width: 40%;
+    }
+    img {
+        height: 40vh;
+        width: 30vw;
+        border-radius: 10px;
     }
 }
 
@@ -70,10 +69,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 3vh 15vw 3vh 0;
-
+    height: 35vh;
     p {
-        width: 50%;
+        width: 40%;
+    }
+    img {
+        height: 30vh;
+        width: 30vw;
+        border-radius: 10px;
     }
 }
 
@@ -81,34 +84,122 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 15vh;
+    height: 55vh;
+    img {
+        height: 30vh;
+        width: 15vw;
+    }
 }
 
 footer {
     background-color: #FF69B4;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-weight: 400;
     font-size: 20px;
     line-height: 27.24px;
-    padding: 2vh 2vw;
-    width: 100%;
+    height: 15vh;
 }
-
 .sectionSociais {
     width: 25vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-
 .sectionInfos {
     text-align: center;
     padding: 0 5vw;
+    .Joao {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    .JoaoEasterEgg {
+        visibility: hidden; /* A imagem começa escondida */
+        width: 200px;
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%; /* Ajuste a posição da imagem em relação ao parágrafo */
+        left: 50%;
+        margin-left: -100px; /* Centraliza a imagem */
+        opacity: 0; /* Invisível inicialmente */
+        transition: opacity 0.3s ease-in-out; /* Suave transição */
+        border-radius: 5px; /* Opcional: arredondamento */
+    }
+    }
+    .Joao:hover .JoaoEasterEgg {
+        visibility: visible; /* Mostra a imagem ao passar o mouse */
+        opacity: 1; /* Torna a imagem visível */
+    }
 }
-
 .sectionLogo {
     width: 25vw;
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width:768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: 20vh;
+        nav {
+            width: 100%;
+            font-size: 20px;
+        }
+    }
+    .sectionSobre {
+        flex-direction: column-reverse;
+        height: 65vh;
+        align-items: center;
+        p {
+            width: 90%;
+            font-size: 18px;
+        }
+        img {
+            height: 35vh;
+            width: 45vw;
+        }
+    }
+    .sectionConscientizacao {
+        flex-direction: column;
+        height: 65vh;
+        p {
+            width: 90%;
+            font-size: 18px;
+        }
+        img {
+            height: 35vh;
+            width: 45vw;
+        }
+    }
+    .sectionDicas {
+        display: ruby;
+        img {
+            height: 30vh;
+            width: 35vw;
+        }
+    }
+    footer {
+        height: 20vh;
+    }
+    .sectionSociais {
+        flex-direction: column;
+        height: 20vh;
+        img {
+            height: 5vh;
+            display: flex;  
+        }
+    }
+    .sectionInfos {
+        font-size: 15px;
+    }
+    .sectionLogo {
+        display: flex;
+        justify-content: center;
+        img {
+            height: 10vh;
+        }
+    }
 }
